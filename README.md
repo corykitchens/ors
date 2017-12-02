@@ -20,7 +20,7 @@ $ node node_modules/mocha/bin/mocha
 ## Usage
 First, import the module via `require`
 ```
-const OnlineRegistration = require('osr-cp');
+const OnlineRegistration = require('ors-cp');
 ```
 Instantiate the instance of the class and pass in the assumed classData object
 ```
@@ -42,24 +42,24 @@ const classData = {
 }
 
 //Instantiate instance of OnlineRegistration
-//Since os is a native Node module, I use osr for the naming convention
+//Since os is a native Node module, I use ors for the naming convention
 //e.g. OnlineRegistrationSystem
-const osr = new OnlineRegistration(classData);
+const ors = new OnlineRegistration(classData);
 ```
 
 ## API Docs
 Most of the API usage is calling various getters. Optional parameters are available as per the method signature stated below.
 
 ### showCourseEnrollment
-```osr.showCourseEnrollment();```
+```ors.showCourseEnrollment();```
 Returns an `Object` containing keys `reservedSeatsAvailable`, `openSeatsAvailable`
 
 ### getOpenSeatsAvailable
-```osr.getOpenSeatsAvailable();```
+```ors.getOpenSeatsAvailable();```
 Returns a `Number` containing the sum of all open seats available for students to enroll in for a course
 
 ### getTotalOpenSeats
-```osr.getTotalOpenSeats();```
+```ors.getTotalOpenSeats();```
 Returns a `Number` containing the sum of all open seats assigned to a course
 
 ### getReservedSeatsAvailable
@@ -71,6 +71,6 @@ Returns a `Number` the sum of reserved seats available for a student to enroll (
 Returns a `Number` containing the sum of all reserved seats enabled in a course e.g. the reserved seats who's effective start date is less than the date of the request.
 
 ### getTotalReservedSeats
-```osr.getTotalReservedSeats(optionalReservationsArray);```
+```ors.getTotalReservedSeats(optionalReservationsArray);```
 Returns a `Number` containing the sum of all reserved seats assigned to a course
 regardless of the date of request/effective start date for each reservation object.
