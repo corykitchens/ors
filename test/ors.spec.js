@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const OnlineRegistration = require('../lib/osr.js');
+const OnlineRegistration = require('../lib/ors.js');
 
 //Test Fixtures
 const classData = {
