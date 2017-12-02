@@ -1,5 +1,5 @@
 {
-  "name": "ors",
+  "name": "ors-cp",
   "version": "1.0.0",
   "description": "A tool for calculating available course enrollment",
   "main": "index.js",
