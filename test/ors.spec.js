@@ -31,32 +31,32 @@ const expectedData = {
   openSeatsAvailable: 3
 };
 
-const osr = new OnlineRegistration(classData);
+const ors = new OnlineRegistration(classData);
 
 describe('Online Registration System - Reserved Seaats', function() {
   it('should return the total sum of all reserved seats despite start date', function() {
-    expect(osr.getTotalReservedSeats()).to.equal(expectedData.totalReservedSeats);
+    expect(ors.getTotalReservedSeats()).to.equal(expectedData.totalReservedSeats);
   });
   it('should return the total sum of all reserved seats that are available based on start date', function() {
-    expect(osr.getEnabledReservedSeats()).to.equal(expectedData.enabledReserevedSeats);
+    expect(ors.getEnabledReservedSeats()).to.equal(expectedData.enabledReserevedSeats);
   });
   it('should return the total sum of reserved seats available', function() {
-    expect(osr.getReservedSeatsAvailable()).to.equal(expectedData.reservedSeatsAvailable);
+    expect(ors.getReservedSeatsAvailable()).to.equal(expectedData.reservedSeatsAvailable);
   });
 });
 
 describe('Online Registration System - Open Seating', function() {
   it('should return the total sum of open seats within a course', function() {
-    expect(osr.getTotalOpenSeats()).to.equal(expectedData.totalOpenSeats);
+    expect(ors.getTotalOpenSeats()).to.equal(expectedData.totalOpenSeats);
   });
   it('should return the total sum of open seats available', function() {
-    expect(osr.getOpenSeatsAvailable()).to.equal(expectedData.openSeatsAvailable);
+    expect(ors.getOpenSeatsAvailable()).to.equal(expectedData.openSeatsAvailable);
   });
 });
 
 describe('Online Registration System - Course Enrollment Statistics', function() {
   it('should return an object containing the correct course enrollment statistics', function() {
-    const obj = osr.showCourseEnrollment(classData);
+    const obj = ors.showCourseEnrollment();
     expect(obj.openSeatsAvailable).to.equal(expectedData.openSeatsAvailable);
     expect(obj.reservedSeatsAvailable).to.equal(expectedData.reservedSeatsAvailable);
   });
